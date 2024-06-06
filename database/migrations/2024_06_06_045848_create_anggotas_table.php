@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->string('hak_akses', ['admin','user'])->default('user');
-            $table->rememberToken();
+            $table->string('no_kartu',50)->unique();
+            $table->string('nama',100);
+            $table->string('tempatLahir',100);
+            $table->date('tanggalLahir');
+            $table->string('jenisKelamin',20);
+            $table->string('alamat',100);
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('anggotas');
     }
 };
