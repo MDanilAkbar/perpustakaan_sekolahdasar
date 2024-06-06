@@ -22,7 +22,7 @@
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-        <p class="login-box-msg">Masukkan Email Dan Password Anda</p>
+        <p class="login-box-msg">Halaman Login</p>
 
         <form action="{{ route('login') }}" method="post">
             @csrf
@@ -64,7 +64,7 @@
             </div>
             <!-- /.col -->
             <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
             </div>
             <!-- /.col -->
             </div>
@@ -72,10 +72,11 @@
 
 
 
-
+        <center>
         <p class="mb-0">
-            <a href="register" class="text-center">Register</a>
+            Buat Akun?  <a href="register" class="text-center">Register</a>
         </p>
+        </center>
         </div>
         <!-- /.login-card-body -->
     </div>
