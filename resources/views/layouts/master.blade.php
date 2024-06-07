@@ -198,15 +198,39 @@
                         <a href="/anggota/" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
-                                Anggota
+                                Data Anggota
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/jurusan/" class="nav-link">
-                            <i class="nav-icon fas fa-building"></i>
+                            <i class="nav-icon fas fa-book"></i>
                             <p>
-                                Buku
+                                Data Buku
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jurusan/" class="nav-link">
+                            <i class="nav-icon fas  fa-user"></i>
+                            <p>
+                                Transaksi
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jurusan/" class="nav-link">
+                            <i class="nav-icon fas fa-money-bill-wave"></i>
+                            <p>
+                                Denda
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jurusan/" class="nav-link">
+                            <i class="nav-icon fas fa-gift"></i>
+                            <p>
+                                Data Hibah
                             </p>
                         </a>
                     </li>
