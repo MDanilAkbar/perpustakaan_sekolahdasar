@@ -25,7 +25,15 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                    <input type="text" name="jenisKelamin" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="jenisKelamin" id="inlineRadio1" value="Laki-Laki">
+                        <label class="form-check-label" for="inlineRadio1">Laki Laki</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="jenisKelamin" id="inlineRadio2" value="Perempuan">
+                        <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
