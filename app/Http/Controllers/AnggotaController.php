@@ -81,6 +81,9 @@ class AnggotaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $ang = Anggota::find($id);
+        $ang->delete();
+
+        return redirect('/anggota/');
     }
 }

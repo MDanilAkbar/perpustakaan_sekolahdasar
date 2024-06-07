@@ -26,3 +26,4 @@ Route::get('/anggota/form/', [AnggotaController::class, 'create']);
 Route::post('/anggota/store/', [AnggotaController::class, 'store']);
 Route::get('/anggota/edit/{id}', [AnggotaController::class, 'edit']);
 Route::put('/anggota/{id}', [AnggotaController::class, 'update']);
+Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
