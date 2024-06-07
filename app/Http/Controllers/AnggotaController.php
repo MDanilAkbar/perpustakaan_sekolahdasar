@@ -22,7 +22,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        //
+        return view('anggota.form');
     }
 
     /**
@@ -30,7 +30,16 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ang = new Anggota;
+        $ang->no_kartu = $request->no_kartu;
+        $ang->nama = $request->nama;
+        $ang->tempatLahir = $request->tempatLahir;
+        $ang->tanggalLahir = $request->tanggalLahir;
+        $ang->jenisKelamin = $request->jenisKelamin;
+        $ang->alamat = $request->alamat;
+        $ang->save();
+
+        return redirect('/anggota/');
     }
 
     /**

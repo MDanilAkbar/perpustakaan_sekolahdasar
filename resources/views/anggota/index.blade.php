@@ -9,7 +9,7 @@
                         </div>  
                         <div class="card-header">
                         <h3 class="text-left">                           
-                            <a href="/anggota/form/" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
+                            <a href="/anggota/form" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
                         </h3>
                         </div>
                         <div class="card-body">

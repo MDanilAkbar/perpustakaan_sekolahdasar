@@ -22,3 +22,5 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/anggota/', [AnggotaController::class, 'index']);
+Route::get('/anggota/form/', [AnggotaController::class, 'create']);
+Route::post('/anggota/store/', [AnggotaController::class, 'store']);
