@@ -34,3 +34,4 @@ Route::get('/buku/form/', [BukuController::class, 'create']);
 Route::post('/buku/store/', [BukuController::class, 'store']);
 Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
 Route::put('/buku/{id}', [BukuController::class, 'update']);
+Route::delete('/buku/{id}', [BukuController::class, 'destroy']);
