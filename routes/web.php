@@ -32,3 +32,5 @@ Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
 Route::get('/buku/', [BukuController::class, 'index']);
 Route::get('/buku/form/', [BukuController::class, 'create']);
 Route::post('/buku/store/', [BukuController::class, 'store']);
+Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
+Route::put('/buku/{id}', [BukuController::class, 'update']);

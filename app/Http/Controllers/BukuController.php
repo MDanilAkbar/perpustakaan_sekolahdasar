@@ -54,7 +54,8 @@ class BukuController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $buk = Buku::find($id);
+        return view('buku.edit',compact('buk'));
     }
 
     /**
@@ -62,7 +63,15 @@ class BukuController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $buk = Buku::find($id);
+        $buk->kode_buku = $request->kode_buku;
+        $buk->judul = $request->judul;
+        $buk->penulis = $request->penulis;
+        $buk->penerbit = $request->penerbit;
+        $buk->tahunterbit = $request->tahunterbit;
+        $buk->save();
+
+        return redirect('/buku/');
     }
 
     /**
