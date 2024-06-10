@@ -22,7 +22,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        //
+        return view('buku.form');
     }
 
     /**
@@ -30,7 +30,15 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $buk = new Buku;
+        $buk->kode_buku = $request->kode_buku;
+        $buk->judul = $request->judul;
+        $buk->penulis = $request->penulis;
+        $buk->penerbit = $request->penerbit;
+        $buk->tahunterbit = $request->tahunterbit;
+        $buk->save();
+
+        return redirect('/buku/');
     }
 
     /**
