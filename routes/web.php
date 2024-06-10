@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnggotaController;
+use App\Http\Controllers\BukuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,5 @@ Route::post('/anggota/store/', [AnggotaController::class, 'store']);
 Route::get('/anggota/edit/{id}', [AnggotaController::class, 'edit']);
 Route::put('/anggota/{id}', [AnggotaController::class, 'update']);
 Route::delete('/anggota/{id}', [AnggotaController::class, 'destroy']);
+
+Route::get('/buku/', [BukuController::class, 'index']);
