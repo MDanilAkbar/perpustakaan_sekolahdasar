@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BukuController;
+use App\Http\Controllers\HibahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,10 @@ Route::post('/buku/store/', [BukuController::class, 'store']);
 Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
 Route::put('/buku/{id}', [BukuController::class, 'update']);
 Route::delete('/buku/{id}', [BukuController::class, 'destroy']);
+
+Route::get('/hibah/', [HibahController::class, 'index']);
+Route::get('/hibah/form/', [HibahController::class, 'create']);
+Route::post('/hibah/store/', [HibahController::class, 'store']);
+Route::get('/hibah/edit/{id}', [HibahController::class, 'edit']);
+Route::put('/hibah/{id}', [HibahController::class, 'update']);
+Route::delete('/hibah/{id}', [HibahController::class, 'destroy']);
