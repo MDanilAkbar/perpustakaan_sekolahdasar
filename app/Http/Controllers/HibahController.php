@@ -53,7 +53,8 @@ class HibahController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $hib = Hibah::find($id);
+        return view('hibah.edit',compact('hib'));
     }
 
     /**
@@ -61,7 +62,14 @@ class HibahController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $hib = Hibah::find($id);
+        $hib->no_hibah = $request->no_hibah;
+        $hib->nama = $request->nama;
+        $hib->judulbuku = $request->judulbuku;
+        $hib->jumlahbuku = $request->jumlahbuku;
+        $hib->save();
+
+        return redirect('/hibah/');
     }
 
     /**
