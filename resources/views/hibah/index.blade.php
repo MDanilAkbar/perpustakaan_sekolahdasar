@@ -48,11 +48,11 @@
                                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                        Yakin Data Hibah {{$item->nama}} di Hapus?
+                                                        Yakin Data Hibah Donatur {{$item->nama}} di Hapus?
                                                         </div>
                                                         <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <form action="/buku/{{$item->id}}" method="post">
+                                                        <form action="/hibah/{{$item->id}}" method="post">
                                                             @method('DELETE')
                                                             @csrf
                                                             <button type="submit" class="btn btn-danger">Hapus</button>

@@ -77,6 +77,9 @@ class HibahController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $hib = Hibah::find($id);
+        $hib->delete();
+
+        return redirect('/hibah/');
     }
 }
