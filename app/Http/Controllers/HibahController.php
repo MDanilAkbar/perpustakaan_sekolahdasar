@@ -22,7 +22,7 @@ class HibahController extends Controller
      */
     public function create()
     {
-        //
+        return view('hibah.form');
     }
 
     /**
@@ -30,7 +30,14 @@ class HibahController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $hib = new Hibah;
+        $hib->no_hibah = $request->no_hibah;
+        $hib->nama = $request->nama;
+        $hib->judulbuku = $request->judulbuku;
+        $hib->jumlahbuku = $request->jumlahbuku;
+        $hib->save();
+
+        return redirect('/hibah/');
     }
 
     /**
