@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HibahController;
+use App\Http\Controllers\PeminjamanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,10 @@ Route::post('/hibah/store/', [HibahController::class, 'store']);
 Route::get('/hibah/edit/{id}', [HibahController::class, 'edit']);
 Route::put('/hibah/{id}', [HibahController::class, 'update']);
 Route::delete('/hibah/{id}', [HibahController::class, 'destroy']);
+
+Route::get('/peminjaman/', [PeminjamanController::class, 'index']);
+Route::get('/peminjaman/form/', [PeminjamanController::class, 'create']);
+Route::post('/peminjaman/store/', [PeminjamanController::class, 'store']);
+Route::get('/peminjaman/edit/{id}', [PeminjamanController::class, 'edit']);
+Route::put('/peminjaman/{id}', [PeminjamanController::class, 'update']);
+Route::delete('/peminjaman/{id}', [PeminjamanController::class, 'destroy']);
