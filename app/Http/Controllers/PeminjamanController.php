@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Peminjaman;
+use App\Models\Anggota;
+use App\Models\Buku;
+
 
 class PeminjamanController extends Controller
 {
@@ -22,7 +25,8 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        return view('peminjaman.form');
+        $ang = Anggota::all();
+        return view('peminjaman.form',compact('ang'));
     }
 
     /**
@@ -30,7 +34,13 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pem = new Peminjaman;
+        $pem->id_peminjaman = $request->id_peminjaman;
+        $pem->tglpeminjaman = $request->tglpeminjaman;
+        $pem->tglpengembalian = $request->tglpengembalian;
+        $pem->anggotas_id = $request->no_kartu;
+        $pem->bukus_id = $request->kode_buku;
+        $pem->save();
     }
 
     /**
