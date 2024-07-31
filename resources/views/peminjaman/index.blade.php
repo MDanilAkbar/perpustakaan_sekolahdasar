@@ -35,7 +35,7 @@
                             <td>{{$item->tglpeminjaman}}</td>
                             <td>{{$item->tglpengembalian}}</td>
                             <td>{{$item->anggotas->no_kartu}}</td>
-                            <td>{{ $item->bukus ? $item->bukus->kode_buku : '-' }}</td>
+                            <td>{{$item->bukus->kode_buku}}</td>
                             <td>
                                 <a href="/peminjaman/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">

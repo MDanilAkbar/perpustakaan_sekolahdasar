@@ -28,21 +28,21 @@
                                     </thead>
 
                                     <tbody>
-                                        @forelse ($buk as $item)
+                                        @forelse ($buk as $item2)
                                         <tr>
                                         <td>{{$nomor++}}</td>
-                                        <td>{{$item->kode_buku}}</td>
-                                        <td>{{$item->judul}}</td>
-                                        <td>{{$item->penulis}}</td>
-                                        <td>{{$item->penerbit}}</td>
-                                        <td>{{$item->tahunterbit}}</td> 
+                                        <td>{{$item2->kode_buku}}</td>
+                                        <td>{{$item2->judul}}</td>
+                                        <td>{{$item2->penulis}}</td>
+                                        <td>{{$item2->penerbit}}</td>
+                                        <td>{{$item2->tahunterbit}}</td> 
                                             <td>
-                                                <a href="/buku/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
-                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">
+                                                <a href="/buku/edit/{{$item2->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
+                                                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item2->id}}">
                                                     <i class="fa fa-trash"></i>
                                                 </button>
                                                 <!-- Modal -->
-                                                <div class="modal fade" id="hapus{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal fade" id="hapus{{$item2->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                     <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="modal-header">
@@ -50,11 +50,11 @@
                                                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body">
-                                                        Yakin Data Buku {{$item->judul}} di Hapus?
+                                                        Yakin Data Buku {{$item2->judul}} di Hapus?
                                                         </div>
                                                         <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <form action="/buku/{{$item->id}}" method="post">
+                                                        <form action="/buku/{{$item2->id}}" method="post">
                                                             @method('DELETE')
                                                             @csrf
                                                             <button type="submit" class="btn btn-danger">Hapus</button>
