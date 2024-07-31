@@ -33,9 +33,9 @@
                   <label for="exampleInputPassword1" class="form-label">Kode Buku</label>
                   <select name="kode_buku" class="form-control" id="">
                     <option value="">-Pilih Kode Buku-</option>
-                    {{--@foreach ($buk as $item)
-                        <option value="{{$item->id}}">{{$item->kode_buku}} - {{$item->buku}}</option>
-                    @endforeach --}}
+                    @foreach ($buk as $item2)
+                        <option value="{{$item2->id}}">{{$item2->kode_buku}} - {{$item2->buku}}</option>
+                    @endforeach 
 
                 </select>
                 </div>

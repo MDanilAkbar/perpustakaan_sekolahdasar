@@ -18,7 +18,6 @@ return new class extends Migration
             $table->date('tglpengembalian');
             $table->bigInteger('anggotas_id');
             $table->bigInteger('bukus_id');
-            $table->bigInteger('petugass_id');
             $table->timestamps();
         });
     }

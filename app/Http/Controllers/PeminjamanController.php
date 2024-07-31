@@ -26,7 +26,8 @@ class PeminjamanController extends Controller
     public function create()
     {
         $ang = Anggota::all();
-        return view('peminjaman.form',compact('ang'));
+        $buk = Buku::all();
+        return view('peminjaman.form',compact('ang','buk'));
     }
 
     /**
@@ -41,6 +42,8 @@ class PeminjamanController extends Controller
         $pem->anggotas_id = $request->no_kartu;
         $pem->bukus_id = $request->kode_buku;
         $pem->save();
+
+        return redirect('/peminjaman/');
     }
 
     /**
