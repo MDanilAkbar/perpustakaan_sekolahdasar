@@ -21,7 +21,7 @@
                             <th>ID Peminjaman</th>
                             <th>Tanggal Peminjaman</th>
                             <th>Tanggal Pengembalian</th>
-                            <th>NO Kartu</th>
+                            <th>No Kartu</th>
                             <th>Kode Buku</th>
                             <th>Aksi</th>
                         </tr>

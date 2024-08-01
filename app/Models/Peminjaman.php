@@ -15,4 +15,9 @@ class Peminjaman extends Model
     {
         return $this->hasOne(Anggota::class, 'id','anggotas_id');
     }
+    
+    public function bukus(): HasOne
+    {
+        return $this->hasOne(Buku::class, 'id','bukus_id');
+    }
 }
