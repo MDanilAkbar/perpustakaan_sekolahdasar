@@ -59,7 +59,10 @@ class PeminjamanController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $pem = Peminjaman::find($id);
+        $ang = Anggota::all();
+        $buk = Buku::all();
+        return view('peminjaman.edit',compact('pem','ang','buk'));
     }
 
     /**
@@ -67,7 +70,15 @@ class PeminjamanController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $pem = Peminjaman::find($id);
+        $pem->id_peminjaman = $request->id_peminjaman;
+        $pem->tglpeminjaman = $request->tglpeminjaman;
+        $pem->tglpengembalian = $request->tglpengembalian;
+        $pem->anggotas_id = $request->no_kartu;
+        $pem->bukus_id = $request->kode_buku;
+        $pem->save();
+
+        return redirect('/peminjaman/');
     }
 
     /**
