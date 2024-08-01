@@ -86,6 +86,9 @@ class PeminjamanController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $pem = Peminjaman::find($id);
+        $pem->delete();
+
+        return redirect('/peminjaman/');
     }
 }
