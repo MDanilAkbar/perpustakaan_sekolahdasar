@@ -5,6 +5,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HibahController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\KembaliController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,7 @@ Route::post('/peminjaman/store/', [PeminjamanController::class, 'store']);
 Route::get('/peminjaman/edit/{id}', [PeminjamanController::class, 'edit']);
 Route::put('/peminjaman/{id}', [PeminjamanController::class, 'update']);
 Route::delete('/peminjaman/{id}', [PeminjamanController::class, 'destroy']);
+
+Route::get('/kembali/{id}', [KembaliController::class, 'kembali']);
+
+Route::get('/kembali/', [KembaliController::class, 'index']);

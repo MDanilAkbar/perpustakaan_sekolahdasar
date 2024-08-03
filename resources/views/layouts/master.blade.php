@@ -226,7 +226,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/pengembalian/" class="nav-link">
+                        <a href="/kembali/" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Pengembalian</p>
                         </a>
