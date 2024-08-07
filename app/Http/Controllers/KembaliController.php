@@ -75,6 +75,13 @@ class KembaliController extends Controller
         $pem = Peminjaman::find($id);
         $ang = Anggota::all();
         $buk = Buku::all();
-        return view('peminjaman.dikembalikan',compact('pem','ang','buk'));
+        $tgl_kembali = date_create('$tglpeminjaman');
+        $tgl_hariini = now();
+        if($tgl_hariini > $tgl_kembali){
+            $denda = 5000;
+        }else{
+            $denda = 0;
+        }
+        return view('peminjaman.dikembalikan',compact('pem','ang','buk','tgl_kembali','denda'));
     }
 }

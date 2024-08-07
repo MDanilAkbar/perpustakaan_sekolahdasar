@@ -17,7 +17,6 @@ return new class extends Migration
             $table->date('tglpengembalian');
             $table->string('denda',10);
             $table->bigInteger('peminjaman_id');
-            $table->bigInteger('petugass_id');
             $table->timestamps();
         });
     }

@@ -41,6 +41,10 @@
 
                 </select>
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Denda</label>
+                    <input type="text" readonly name="denda" value="{{$tgl_hariini > $tgl_kembali->$denda}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
                 <button type="submit" class="btn btn-primary">Dikembalikan</button>
             </form>
         </div>

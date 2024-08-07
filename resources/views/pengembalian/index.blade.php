@@ -20,6 +20,7 @@
                             <th>No</th>
                             <th>ID Pengembalian</th>
                             <th>Tanggal Pengembalian</th>
+                            <th>Denda</th>
                             <th>ID Peminjaman</th>
                             <th>Aksi</th>
                         </tr>
@@ -31,6 +32,7 @@
                             <td>{{$nomor++}}</td>
                             <td>{{$item->id_pengembalian}}</td>
                             <td>{{$item->tgl_kembali}}</td>
+                            <td>{{$item->denda}}</td>
                             <td>{{$item->peminjamans->id_peminjaman}}</td>
                             <td>
                                 {{--<a href="/peminjaman/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>--}}
