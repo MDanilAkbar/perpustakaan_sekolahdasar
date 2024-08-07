@@ -5,11 +5,15 @@
 @section('content')
     <div class="card">
     <div class="card-body">
-            <form method="POST" action="/buku/store/">
+            <form method="POST" action="/buku/store/"  enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Kode Buku</label>
                     <input type="text" name="kode_buku" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Sampul Buku</label>
+                    <input type="file" accept="image/*" name="sampul_buku" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Judul Buku</label>

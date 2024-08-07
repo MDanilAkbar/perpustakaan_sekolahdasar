@@ -19,6 +19,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Kode Buku</th>
+                                            <th>Sampul Buku</th>
                                             <th>Judul Buku</th>
                                             <th>Penulis Buku</th>
                                             <th>Penerbit Buku</th>
@@ -32,6 +33,7 @@
                                         <tr>
                                         <td>{{$nomor++}}</td>
                                         <td>{{$item2->kode_buku}}</td>
+                                        <td><img src="{{asset('foto_sampulbuku/'.$item2->sampul_buku)}}" height="50"></td>
                                         <td>{{$item2->judul}}</td>
                                         <td>{{$item2->penulis}}</td>
                                         <td>{{$item2->penerbit}}</td>
