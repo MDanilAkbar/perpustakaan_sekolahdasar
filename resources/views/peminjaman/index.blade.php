@@ -48,7 +48,7 @@
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                     <i class="fa fa-trash"></i>
                                 </button>
-                                <a href="/kembali/{{$item->id}}" class="btn btn-success">Dikembalikan</a>
+                                {{--<a href="/kembali/{{$item->id}}" class="btn btn-success">Dikembalikan</a>--}}
                                 <!-- Modal -->
                                 <div class="modal fade" id="hapus{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
