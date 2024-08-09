@@ -162,7 +162,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="../../index3.html" class="brand-link">
+        <a href="/" class="brand-link">
             <img src="../../dist/img/cth.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">PERPUSTAKAAN</span>
         </a>
@@ -172,7 +172,7 @@
             <!-- Sidebar user (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    <img src="../../dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -187,13 +187,14 @@
                     <!-- Add icons to the links using the .nav-icon class
                         with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="/" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                         </a>
                     </li>
+                    <br>
                     <li class="nav-item">
                         <a href="/anggota/" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
@@ -202,6 +203,7 @@
                             </p>
                         </a>
                     </li>
+                    <br>
                     <li class="nav-item">
                         <a href="/buku/" class="nav-link">
                             <i class="nav-icon fas fa-book"></i>
@@ -210,9 +212,10 @@
                             </p>
                         </a>
                     </li>
+                    <br>
                     <li class="nav-item">
                     <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-calendar-alt"></i>
+                    <i class="nav-icon fas fa-exchange-alt"></i>
                     <p>
                         Transaksi
                         <i class="right fas fa-angle-left"></i>
@@ -221,26 +224,27 @@
                     <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="/peminjaman/" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="nav-icon fas fa-solid fa-upload"></i>
                         <p>Peminjaman</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="/pengembalian/" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
+                        <i class="nav-icon fas fa-download"></i>
                         <p>Pengembalian</p>
                         </a>
                     </li>
                     </ul>
                 </li>
-                    <li class="nav-item">
+                <br>
+                    {{--<li class="nav-item">
                         <a href="/jurusan/" class="nav-link">
                             <i class="nav-icon fas fa-money-bill-wave"></i>
                             <p>
                                 Denda
                             </p>
                         </a>
-                    </li>
+                    </li>--}}
                     <li class="nav-item">
                         <a href="/hibah/" class="nav-link">
                             <i class="nav-icon fas fa-gift"></i>
@@ -312,9 +316,9 @@
 
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-        <b>Version</b> 3.2.0
+        {{--<b>Version</b> 3.2.0--}}
         </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+        <strong>Aplikasi Perpustakaan Sekolah Dasar Berbasis Web |</strong> Muhammad Danil Akbar.
     </footer>
 
     <!-- Control Sidebar -->
