@@ -26,9 +26,9 @@
                                             <th>Kode Buku</th>
                                             <th>Sampul Buku</th>
                                             <th>Judul Buku</th>
-                                            <th>Penulis Buku</th>
+                                            {{--<th>Penulis Buku</th>
                                             <th>Penerbit Buku</th>
-                                            <th>Tahun Terbit Buku</th> 
+                                            <th>Tahun Terbit Buku</th>--}} 
                                             <th>Aksi</th>                                          
                                         </tr>
                                     </thead>
@@ -40,10 +40,63 @@
                                         <td>{{$item2->kode_buku}}</td>
                                         <td><img src="{{asset('foto_sampulbuku/'.$item2->sampul_buku)}}" height="50"></td>
                                         <td>{{$item2->judul}}</td>
-                                        <td>{{$item2->penulis}}</td>
+                                        {{--<td>{{$item2->penulis}}</td>
                                         <td>{{$item2->penerbit}}</td>
-                                        <td>{{$item2->tahunterbit}}</td> 
+                                        <td>{{$item2->tahunterbit}}</td> --}}
                                             <td>
+
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#detail{{$item2->id}}">Detail</i>
+                                            </button>
+
+                                            <!-- Modal Detail-->
+                                            <div class="modal fade" id="detail{{$item2->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail {{$item2->nama}}</h1>
+                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <table class="table">
+
+                                        <tbody>
+                                        
+                                            <tr>
+                                                <td>Kode Buku</td>
+                                                <th scope="row">{{$item2->kode_buku}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Sampul Buku</td>
+                                                <th scope="row"><img src="{{ asset('/foto_sampulbuku/'.$item2->sampul_buku) }}" width="100" alt=""></th>
+                                            </tr>
+                                            <tr>
+                                                <td>Judul Buku</td>
+                                                <th scope="row">{{$item2->judul}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Penulis Buku</td>
+                                                <th scope="row">{{$item2->penulis}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Penerbit Buku</td>
+                                                <th scope="row">{{$item2->penerbit}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Tahun Terbit Buku</td>
+                                                <th scope="row">{{$item2->tahunterbit}}</th>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+
+
                                                 <a href="/buku/edit/{{$item2->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item2->id}}">
                                                     <i class="fa fa-trash"></i>
