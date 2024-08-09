@@ -30,6 +30,18 @@ class BukuController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'kode_buku' => 'required|unique:bukus,kode_buku',
+            'judul' => 'required',
+            'penulis' => 'required',
+            'penerbit' => 'required',
+            'tahunterbit' => 'required',
+            'sampul_buku' => 'required|image|max:10000',
+        ],[
+            'required' => ':attribute Tidak Boleh Kosong',
+            'unique' => ':attribute Sudah Digunakan',
+        ]);
+
         $buk = new Buku;
         $buk->kode_buku = $request->kode_buku;
         $buk->judul = $request->judul;
