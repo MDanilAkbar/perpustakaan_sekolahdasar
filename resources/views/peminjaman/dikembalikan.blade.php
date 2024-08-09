@@ -5,10 +5,14 @@
 @section('content') 
     <div class="card">
     <div class="card-body">
-            <form method="POST" action="/peminjaman/{{$pem->id}}">
+            <form method="POST" action="/kembali/store/">
                 @method('PUT')
                 @csrf
 
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">ID Pengembalian</label>
+                    <input type="text" name="id_pengembalian"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">ID Peminjaman</label>
                     <input type="text" readonly name="id_peminjaman" value="{{$pem->id_peminjaman}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

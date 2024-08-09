@@ -5,6 +5,7 @@ use App\Http\Controllers\AnggotaController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HibahController;
 use App\Http\Controllers\PeminjamanController;
+use App\Http\Controllers\PengembalianController;
 use App\Http\Controllers\KembaliController;
 
 /*
@@ -56,3 +57,11 @@ Route::delete('/peminjaman/{id}', [PeminjamanController::class, 'destroy']);
 Route::get('/kembali/{id}', [KembaliController::class, 'kembali']);
 
 Route::get('/kembali/', [KembaliController::class, 'index']);
+Route::get('/kembali/form/', [KembaliController::class, 'create']);
+Route::post('/kembali/store/', [KembaliController::class, 'store']);
+
+
+Route::get('/pengembalian/', [PengembalianController::class, 'index']);
+Route::get('/pengembalian/form/', [PengembalianController::class, 'create']);
+Route::post('/pengembalian/store/', [PengembalianController::class, 'store']);
+Route::delete('/pengembalian/{id}', [PengembalianController::class, 'destroy']);

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('tglpengembalian');
             $table->bigInteger('anggotas_id');
             $table->bigInteger('bukus_id');
+            $table->string('status',50);
             $table->timestamps();
         });
     }

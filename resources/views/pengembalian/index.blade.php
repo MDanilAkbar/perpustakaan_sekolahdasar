@@ -7,11 +7,11 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold ">Data Pengembalian</h6>
         </div>
-        {{--<div class="card-header">
+        <div class="card-header">
             <h3 class="text-left">
-                <a href="/peminjaman/form" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
+                <a href="/pengembalian/form" class="btn btn-primary"><i class="fa fa-folder-plus"></i> Tambah Data</a>
             </h3>
-        </div>--}}
+        </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -22,18 +22,20 @@
                             <th>Tanggal Pengembalian</th>
                             <th>Denda</th>
                             <th>ID Peminjaman</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @forelse ($kem as $item)
+                        @forelse ($pen as $item)
                         <tr>
                             <td>{{$nomor++}}</td>
                             <td>{{$item->id_pengembalian}}</td>
-                            <td>{{$item->tgl_kembali}}</td>
+                            <td>{{$item->peminjamans->tglpengembalian}}</td>
                             <td>{{$item->denda}}</td>
                             <td>{{$item->peminjamans->id_peminjaman}}</td>
+                            <td>{{$item->status}}</td>
                             <td>
                                 {{--<a href="/peminjaman/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>--}}
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">
@@ -54,7 +56,7 @@
                                             
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                <form action="/kembali/{{$item->id}}" method="post">
+                                                <form action="/pengembalian/{{$item->id}}" method="post">
                                                     @method('DELETE')
                                                     @csrf
                                                     <button type="submit" class="btn btn-danger">Hapus</button>

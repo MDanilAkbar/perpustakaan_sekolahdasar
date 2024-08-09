@@ -27,7 +27,10 @@ class KembaliController extends Controller
      */
     public function create()
     {
-        //
+        $pem = Peminjaman::where('status', 'pending')->get();
+        $kem = Pengembalian::all();
+        
+        return view('pengembalian.form',compact('pem','kem'));
     }
 
     /**
@@ -35,7 +38,19 @@ class KembaliController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kem = new Pengembalian;
+        $kem->id_pengembalian = $request->id_pengembalian;
+        $kem->tglpengembalian = $request->tglpengembalian;
+        $kem->denda = $request->denda;
+        $kem->peminjamans_id = $request->id_peminjaman;
+        $kem->status = 'selesai';
+        $kem->save();
+
+        $pem = Peminjaman::find($request->peminjamans_id);
+        $pem->status = 'selesai';
+        $pem->save();
+
+        return redirect('/kembali/');
     }
 
     /**
@@ -69,8 +84,8 @@ class KembaliController extends Controller
     {
         //
     }
-
-    public function kembali(string $id)
+}
+   /**  public function kembali(string $id)
     {
         $pem = Peminjaman::find($id);
         $ang = Anggota::all();
@@ -84,4 +99,5 @@ class KembaliController extends Controller
         }
         return view('peminjaman.dikembalikan',compact('pem','ang','buk','tgl_kembali','denda'));
     }
-}
+        */
+

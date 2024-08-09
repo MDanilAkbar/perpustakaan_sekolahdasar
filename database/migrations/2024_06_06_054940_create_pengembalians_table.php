@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('id_pengembalian',50)->unique();
             $table->date('tglpengembalian');
             $table->string('denda',10);
-            $table->bigInteger('peminjaman_id');
+            $table->bigInteger('peminjamans_id');
+            $table->string('status',50);
             $table->timestamps();
         });
     }

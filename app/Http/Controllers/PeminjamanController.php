@@ -41,6 +41,7 @@ class PeminjamanController extends Controller
         $pem->tglpengembalian = $request->tglpengembalian;
         $pem->anggotas_id = $request->no_kartu;
         $pem->bukus_id = $request->kode_buku;
+        $pem->status = $request->status;
         $pem->save();
 
         return redirect('/peminjaman/');

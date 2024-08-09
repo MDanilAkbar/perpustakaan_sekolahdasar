@@ -211,7 +211,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                    <a href="/transaksi/" class="nav-link">
+                    <a href="#" class="nav-link">
                     <i class="nav-icon fas fa-calendar-alt"></i>
                     <p>
                         Transaksi
@@ -226,7 +226,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="/kembali/" class="nav-link">
+                        <a href="/pengembalian/" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>Pengembalian</p>
                         </a>

@@ -28,6 +28,7 @@
                             <th>Tanggal Pengembalian</th>
                             <th>No Kartu</th>
                             <th>Kode Buku</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -41,6 +42,7 @@
                             <td>{{$item->tglpengembalian}}</td>
                             <td>{{$item->anggotas->no_kartu}}</td>
                             <td>{{$item->bukus->kode_buku}}</td>
+                            <td>{{$item->status}}</td>
                             <td>
                                 <a href="/peminjaman/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">

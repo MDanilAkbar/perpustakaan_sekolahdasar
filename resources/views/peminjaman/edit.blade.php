@@ -41,6 +41,12 @@
 
                 </select>
                 </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Status</label>
+                    <select name="status" class="form-control" id="exampleInputPassword1">
+                        <option value="sedang dipinjam">sedang dipinjam</option>                        
+                    </select>
+                </div>
                 <button type="submit" class="btn btn-primary">Edit Data</button>
             </form>
         </div>
