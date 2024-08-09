@@ -24,7 +24,7 @@ class BukuController extends Controller
     {
         return view('buku.form');
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      */
@@ -72,7 +72,7 @@ class BukuController extends Controller
         $buk->penulis = $request->penulis;
         $buk->penerbit = $request->penerbit;
         $buk->tahunterbit = $request->tahunterbit;
-        $buk->sampul_buku = $request->sampul_buku->getClientOriginalName();
+        $buk->sampul_buku = $request->sampul_buku->getClientOriginalName(); 
         $buk->save();
 
         $request->sampul_buku->move('foto_sampulbuku',$request->sampul_buku->getClientOriginalName());

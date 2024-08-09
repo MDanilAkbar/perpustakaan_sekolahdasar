@@ -5,13 +5,17 @@
 @section('content')
     <div class="card">
     <div class="card-body">
-            <form method="POST" action="/anggota/{{$ang->id}}">
+            <form method="POST" action="/anggota/{{$ang->id}}" enctype="multipart/form-data">
                 @method('PUT')
                 @csrf
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">No Kartu</label>
                     <input type="text" name="no_kartu" value="{{$ang->no_kartu}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">foto</label>
+                    <input type="file" accept="image/*" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nama</label>

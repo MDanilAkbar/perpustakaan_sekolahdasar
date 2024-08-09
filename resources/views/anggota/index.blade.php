@@ -24,6 +24,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>No Kartu</th>
+                                            <th>Foto</th>
                                             <th>Nama</th>
                                             <th>Tempat Lahir</th>
                                             <th>Tanggal Lahir</th>
@@ -38,12 +39,70 @@
                                         <tr>
                                         <td>{{$nomor++}}</td>
                                         <td>{{$item->no_kartu}}</td>
+                                        <td><img src="{{asset('foto/'.$item->foto)}}" height="50"></td>
                                         <td>{{$item->nama}}</td>
                                         <td>{{$item->tempatLahir}}</td>
                                         <td>{{$item->tanggalLahir}}</td>
                                         <td>{{$item->jenisKelamin}}</td>
                                         <td>{{$item->alamat}}</td>  
                                             <td>
+
+                                            <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#detail{{$item->id}}">Detail</i>
+                                            </button>
+
+                                            <!-- Modal Detail-->
+                                            <div class="modal fade" id="detail{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Detail {{$item->nama}}</h1>
+                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <table class="table">
+
+                                        <tbody>
+                                        
+                                            <tr>
+                                                <td>Nomor Kartu</td>
+                                                <th scope="row">{{$item->no_kartu}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Foto</td>
+                                                <th scope="row"><img src="{{ asset('/foto/'.$item->foto) }}" width="100" alt=""></th>
+                                            </tr>
+                                            <tr>
+                                                <td>Nama</td>
+                                                <th scope="row">{{$item->nama}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Tempat Lahir</td>
+                                                <th scope="row">{{$item->tempatLahir}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Tanggal Lahir</td>
+                                                <th scope="row">{{$item->tanggalLahir}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Jenis Kelamin</td>
+                                                <th scope="row">{{$item->jenisKelamin}}</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Alamat</td>
+                                                <th scope="row">{{$item->alamat}}</th>
+                                            </tr>
+                                        </tbody>
+                                        </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+
+
                                                 <a href="/anggota/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
                                                 <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus{{$item->id}}">
                                                     <i class="fa fa-trash"></i>

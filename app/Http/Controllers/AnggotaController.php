@@ -25,7 +25,7 @@ class AnggotaController extends Controller
         return view('anggota.form');
     }
 
-    /**
+    /** 
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
@@ -37,8 +37,11 @@ class AnggotaController extends Controller
         $ang->tanggalLahir = $request->tanggalLahir;
         $ang->jenisKelamin = $request->jenisKelamin;
         $ang->alamat = $request->alamat;
+        $ang->foto = $request->foto->getClientOriginalName();
         $ang->save();
 
+        $request->foto->move('foto',$request->foto->getClientOriginalName());
+ 
         return redirect('/anggota/');
     }
 
@@ -71,7 +74,10 @@ class AnggotaController extends Controller
         $ang->tanggalLahir = $request->tanggalLahir;
         $ang->jenisKelamin = $request->jenisKelamin;
         $ang->alamat = $request->alamat;
+        $ang->foto = $request->foto->getClientOriginalName();
         $ang->save();
+
+        $request->foto->move('foto',$request->foto->getClientOriginalName());
 
         return redirect('/anggota/');
     }

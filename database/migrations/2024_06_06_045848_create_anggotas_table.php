@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
             $table->string('no_kartu',50)->unique();
+            $table->string('foto');
             $table->string('nama',100);
             $table->string('tempatLahir',100);
             $table->date('tanggalLahir');
