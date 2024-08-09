@@ -9,23 +9,48 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">No Kartu</label>
-                    <input type="text" name="no_kartu" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="no_kartu" class="form-control @error('no_kartu') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('no_kartu')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Foto</label>
-                    <input type="file" accept="image/*" name="foto" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="file" accept="image/*" name="foto" class="form-control @error('foto') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('foto')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nama</label>
-                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('nama')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
-                    <input type="text" name="tempatLahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="tempatLahir" class="form-control @error('tempatLahir') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('tempatLahir')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
-                    <input type="date" name="tanggalLahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="date" name="tanggalLahir" class="form-control @error('tanggalLahir') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('tanggalLahir')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
@@ -41,7 +66,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="alamat" class="form-control @error('alamat') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    @error('alamat')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>

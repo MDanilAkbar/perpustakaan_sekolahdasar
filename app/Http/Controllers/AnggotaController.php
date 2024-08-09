@@ -30,6 +30,19 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'no_kartu' => 'required|unique:anggotas,no_kartu',
+            'nama' => 'required',
+            'tempatLahir' => 'required',
+            'tanggalLahir' => 'required',
+            'alamat' => 'required',
+            'foto' => 'required|image|max:10000',
+        ],[
+            'required' => ':attribute Tidak Boleh Kosong',
+            'unique' => ':attribute Sudah Digunakan',
+        ]);
+
+
         $ang = new Anggota;
         $ang->no_kartu = $request->no_kartu;
         $ang->nama = $request->nama;
