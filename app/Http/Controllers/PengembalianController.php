@@ -23,6 +23,7 @@ class PengembalianController extends Controller
      */
     public function create()
     {
+        
         $pem = Peminjaman::all();
         $tgl_kembali = date_create('$tglpeminjaman');
         $tgl_hariini = now();
@@ -31,6 +32,7 @@ class PengembalianController extends Controller
         }else{
             $denda = 0;
         }
+        
         return view('pengembalian.form',compact('pem','denda'));
     }
 
@@ -46,11 +48,11 @@ class PengembalianController extends Controller
         $pen->peminjamans_id = $request->id_peminjaman;
         $pen->status = 'selesai';
         $pen->save();
-/**
-        $pem = Peminjaman::find($request->peminjamans_id);
+
+        $pem = Peminjaman::find($request->id_peminjaman);
         $pem->status = 'selesai';
         $pem->save();
-*/
+
         return redirect('/pengembalian/');
     }
 

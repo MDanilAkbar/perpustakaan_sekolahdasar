@@ -24,6 +24,6 @@ class Peminjaman extends Model
 
     public function pengembalians(): BelongsTo
     {
-        return $this->belongsTo(Pengembalian::class);
+        return $this->hasMany(Pengembalian::class);
     }
 }
