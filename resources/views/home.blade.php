@@ -30,51 +30,73 @@
         </div>
         <!-- /.card-body -->--}}
 <br>
-        <div id="layoutSidenav_content">
-                <main>
-                   
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">{{--<i class=" fas fa-users">--}}</i>Data Anggota</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/anggota/">Selengkapnya</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-info text-white mb-4">
-                                    <div class="card-body">Data Buku</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/buku/">Selengkapnya</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Peminjaman</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/peminjaman/">Selengkapnya</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-secondary text-white mb-4">
-                                    <div class="card-body">Pengembalian</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/pengembalian/">Selengkapnya</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+<section class="content">
+    <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- Small box -->
+            <div class="small-box bg-primary">
+                <div class="inner">
+                    <h1></h1>
+                    <p>Data Anggota</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-users"></i>
+                </div>
+                <a href="/anggota/" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
             </div>
         </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- Small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                    <h1></h1>
+                    <p>Data Buku</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-book"></i>
+                </div>
+                <a href="/buku/" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- Small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                    <h1></h1>
+                    <p>Data Peminjaman</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-upload"></i>
+                </div>
+                <a href="/peminjaman/" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+            <!-- Small box -->
+            <div class="small-box bg-secondary">
+                <div class="inner">
+                    <h1></h1>
+                    <p>Data Pengembalian</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-download"></i>
+                </div>
+                <a href="/pengembalian/" class="small-box-footer">
+                    Selengkapnya <i class="fas fa-arrow-circle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
